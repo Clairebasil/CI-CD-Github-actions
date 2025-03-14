@@ -2,7 +2,7 @@ name: Deployment to EC2 server
 on:
   push:
     branches:
-      - main
+      # - main
       # - "feat/**"
       - develop
 
@@ -57,7 +57,7 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to EC2 54.74.153.110 ⏳
+      - name: Deploy to EC2 54.221.51.147 ⏳
         uses: appleboy/ssh-action@master
         if: github.ref == 'refs/heads/develop'
         with:
