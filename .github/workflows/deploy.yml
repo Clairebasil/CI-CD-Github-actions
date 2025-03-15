@@ -57,12 +57,12 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to EC2 18.201.46.121 ⏳
+      - name: Deploy to EC2 18.201.46.121⏳
         uses: appleboy/ssh-action@master
         if: github.ref == 'refs/heads/develop'
         with:
           host: ${{ secrets.SSH_STAGING_HOST }}
-          username: ${{ secrets.ALT_SSH_USER }}
+          username: ${{ secrets.SSH_STAGING_USER }}
           password: ${{ secrets.SSH_STAGING_SECRET }}
           script: |
             set -ex
