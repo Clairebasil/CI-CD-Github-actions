@@ -17,7 +17,7 @@ concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
-  # Deployment workflow
+  
   # build docker image of my code
   # 1. build my code
   # 2. push my built image to a docker registry
