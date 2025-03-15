@@ -14,8 +14,8 @@ services:
       PORT: 5002
     ports:
       - 8081:5002
-    volumes:
-      - .:/www/app
+    # volumes:
+    #   - .:/www/app
       # - /www/app/node_modules
     networks:
       - altsch-network

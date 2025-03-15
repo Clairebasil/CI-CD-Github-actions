@@ -57,7 +57,7 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to EC2 54.221.51.147 ⏳
+      - name: Deploy to EC2 18.201.46.121 ⏳
         uses: appleboy/ssh-action@master
         if: github.ref == 'refs/heads/develop'
         with:
